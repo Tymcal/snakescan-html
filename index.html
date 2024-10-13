@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera Component</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/e1e81ca5ae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="camera-container">
+    <div class="camera-view" id="camera-view">
+      <video id="camera-stream" autoplay playsinline></video> <!-- Video stream -->
+      <img id="captured-image" style="display: none;" /> <!-- Image to display after capture -->
+      
+      <div id="info-overlay" class="info-overlay" style="display: none;">
+        <div class="info-content">
+          <button id="back-button" class="back-button">
+            <i class="fa-solid fa-angle-left" style="color: #ffffff;"></i> Back
+          </button>
+          <img class="snake-img" id="snake-img" alt="">
+          <h2 id="snake-title"></h2>
+          <p class="appearance" id="appearance"></p>
+          <div class="details">
+            <div id="poisonous"></div>
+            <div id="attack"></div>
+            <div id="threaten"></div>
+          </div>
+          <hr>
+          <p class="subtitle">อาหาร</p>
+          <p id="prey"></p>
+          <p class="subtitle">ที่อยู่</p>
+          <p id="habitat"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <input type="file" accept="image/*" id="upload-image" style="display: none;" />
+      <button id="upload-button" class="upload-button">
+        <i class="fa-solid fa-images fa-2xl" style="color: #ffffff;"></i>
+      </button>
+      <button id="capture-button" class="capture-button"></button>
+    </div>
+  </div>
+</body>
+</html>

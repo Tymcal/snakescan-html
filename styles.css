@@ -11,6 +11,14 @@ body, html {
   background-color: #f0f0f0;
 }
 
+@supports (height: 100dvh) {
+  body, html {
+    --height: 100dvh;
+  }
+}
+
+/* iphone height : 659px */
+
 video {
   height: 100%;
 }

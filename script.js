@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const imageData = canvas.toDataURL('image/png');
     capturedImageElement.src = imageData;
-    capturedImageElement.style.height = '100%';
     capturedImageElement.style.display = 'block';
     videoElement.style.display = 'none';
     captureButton.style.display = 'none';
@@ -85,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
       reader.onload = (e) => {
         capturedImageElement.src = e.target.result;
         capturedImageElement.style.display = 'block';
+        captureButton.style.display = 'none';
+        uploadButton.style.display = 'none';
         videoElement.style.display = 'none';
         infoOverlayElement.style.display = 'block'; // Show overlay
       };

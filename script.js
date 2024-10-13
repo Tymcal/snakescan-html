@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('snake-img').src = ExampleContent.img;
   document.getElementById('snake-title').textContent = ExampleContent.title;
   document.getElementById('appearance').textContent = ExampleContent.appearance;
-  document.getElementById('poisonous').textContent = ExampleContent.poisonous + ' พิษ';
-  document.getElementById('attack').textContent = ExampleContent.attack + ' กัด';
-  document.getElementById('threaten').textContent = ExampleContent.threaten + ' ขู่';
+  document.getElementById('poisonous').textContent = ExampleContent.poisonous + 'พิษ';
+  document.getElementById('attack').textContent = ExampleContent.attack + 'กัด';
+  document.getElementById('threaten').textContent = ExampleContent.threaten + 'ขู่';
   document.getElementById('prey').textContent = ExampleContent.prey;
   document.getElementById('habitat').textContent = ExampleContent.habitat;
 
@@ -55,8 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const imageData = canvas.toDataURL('image/png');
     capturedImageElement.src = imageData;
+    capturedImageElement.style.height = '100%';
     capturedImageElement.style.display = 'block';
     videoElement.style.display = 'none';
+    captureButton.style.display = 'none';
+    uploadButton.style.display = 'none';
     infoOverlayElement.style.display = 'block'; // Show overlay
   });
 
@@ -65,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     capturedImageElement.style.display = 'none';
     videoElement.style.display = 'block';
     infoOverlayElement.style.display = 'none'; // Hide overlay
+    captureButton.style.display = 'inline-block';
+    uploadButton.style.display = 'inline-block';
     startCamera(); // Restart the camera
   });
 

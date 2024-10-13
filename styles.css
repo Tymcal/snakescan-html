@@ -11,6 +11,10 @@ body, html {
   background-color: #f0f0f0;
 }
 
+video {
+  height: 100%;
+}
+
 /* Container for the camera interface */
 .camera-container {
   display: flex;
@@ -85,6 +89,15 @@ h2 {
 
 svg {
   padding-right: 5px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .back-button {
